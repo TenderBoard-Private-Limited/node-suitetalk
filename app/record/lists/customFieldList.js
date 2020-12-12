@@ -54,7 +54,14 @@ class CustomFieldList extends BaseObject {
             }
 
             xml.push(`>`);
-            xml.push(`<platformCore:value>${v}</platformCore:value>`);
+
+            if (el._type === 'SelectCustomFieldRef') {
+                xml.push(`<platformCore:value internalId="${v['internalId']}" typeId="${v['typeId']}" />`);
+            }
+            else {
+                xml.push(`<platformCore:value>${v}</platformCore:value>`);
+            }
+
             xml.push("</platformCore:customField>");
         });
 
