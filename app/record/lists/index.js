@@ -10,7 +10,8 @@ const Lists = {
     SalesOrderItemList: require("./salesOrderItemList"),
     PurchaseOrderItem: require("./purchaseOrderItem"),
     PurchaseOrderItemList: require("./purchaseOrderItemList"),
-
+    ItemReceiptItem: require("./itemReceiptItem"),
+    ItemReceiptItemList: require("./itemReceiptItemList"),
 };
 
 module.exports = Lists;
