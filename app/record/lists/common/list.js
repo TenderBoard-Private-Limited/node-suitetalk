@@ -33,6 +33,7 @@ class List extends BaseObject {
 
         const node = {};
 
+        // TODO: Changing to array does not able to set $attributes to elements.
         node[type] = [];
 
         if (attributes) {
