@@ -12,6 +12,8 @@ const Lists = {
     PurchaseOrderItemList: require("./purchaseOrderItemList"),
     ItemReceiptItem: require("./itemReceiptItem"),
     ItemReceiptItemList: require("./itemReceiptItemList"),
+    VendorBillItem: require("./vendorBillItem"),
+    VendorBillItemList: require("./vendorBillItemList"),
 };
 
 module.exports = Lists;

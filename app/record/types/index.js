@@ -20,6 +20,7 @@ const Types = {
     Vendor: require("./vendor"),
     PurchaseOrder: require("./purchaseOrder"),
     ItemReceipt: require("./itemReceipt"),
+    VendorBill: require("./vendorBill"),
 };
 
 module.exports = Types;
