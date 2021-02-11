@@ -126,6 +126,24 @@ class Service {
     }
 
     /**
+     * Initialize a record
+     * @param {string} type
+     * @param {object} reference
+     * @return {Promise<any>}
+     */
+    initialize(type, reference) {
+        _assertConnection(this);
+        const param = {
+            initializeRecord: {
+                type,
+                reference,
+            }
+        }
+        const initialize = denodeify(this.config.client.initialize);
+        return initialize(param);
+    }
+
+    /**
      *
      * @param {Reference[]} recordRefs
      * @return {Promise<any>}
