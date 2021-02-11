@@ -65,8 +65,8 @@ class Service {
     delete(record) {
         _assertConnection(this);
         const soapObj = record.getNode();
-        const add = denodeify(this.config.client.add);
-        return add(soapObj);
+        const del = denodeify(this.config.client.delete);
+        return del(soapObj);
     }
 
     /**
@@ -79,8 +79,8 @@ class Service {
         const soapObj = recordArr.map((record) => {
             return record.getNode();
         });
-        const add = denodeify(this.config.client.add);
-        return add(soapObj);
+        const del = denodeify(this.config.client.delete);
+        return del(soapObj);
     }
 
     /**
